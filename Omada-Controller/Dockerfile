@@ -2,6 +2,12 @@ ARG BASE=mbentley/omada-controller:latest
 FROM ${BASE}
 HEALTHCHECK CMD wget --quiet --tries=1 --no-check-certificate http://127.0.0.1:8088 || exit 1
 
+ARG OMADA_VER=5.3.1
+ARG OMADA_TAR="Omada_SDN_Controller_v${OMADA_VER}_Linux_x64.tar.gz"
+ARG OMADA_URL="https://static.tp-link.com/upload/software/2022/202205/20220507/${OMADA_TAR}"
+# valid values: amd64 (default) | arm64 | armv7l
+ARG ARCH=arm64
+
 COPY install.sh healthcheck.sh entrypoint.sh /
 
 RUN chmod +x /*.sh
