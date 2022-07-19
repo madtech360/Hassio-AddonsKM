@@ -53,7 +53,7 @@ mkdir "${OMADA_DIR}" -vp
 cp bin "${OMADA_DIR}" -r
 cp data "${OMADA_DIR}" -r
 cp properties "${OMADA_DIR}" -r
-cp webapps "${OMADA_DIR}" -r
+#cp webapps "${OMADA_DIR}" -r
 cp keystore "${OMADA_DIR}" -r
 cp lib "${OMADA_DIR}" -r
 cp install.sh "${OMADA_DIR}" -r
